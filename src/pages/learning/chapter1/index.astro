@@ -1,0 +1,29 @@
+---
+const rootPath = "/learning/chapter1"
+import '../../../learning/chapter1/css/style.css'
+import { Image } from 'astro:assets';
+import logo from "../../../learning/chapter1/img/logo.svg"
+import profile from "../../../learning/chapter1/img/profile.png"
+---
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Dry Flower Life</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1 class="logo">
+            <a href={rootPath}>
+                <Image src={logo} alt="demo" />
+            </a>
+        </h1>
+        <nav>
+            <ul class="navi">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#works">Works</a></li>
+            </ul>
+        </nav>
+        <Image src={profile} alt="profile" />
+    </body>
+</html>
